@@ -117,7 +117,7 @@ class Scanner {
                 } else if (isAlpha(c)) {
                     identifier();
                 } else {
-                    Main.error(line, "Unexpected character: " + c);
+                    Main.error(line, "Unexpected character: " + c, 65);
                 }
         }
     }
@@ -177,7 +177,7 @@ class Scanner {
         }
 
         if (isAtEnd()) {
-            Main.error(line, "Unterminated string.");
+            Main.error(line, "Unterminated string.", 65);
             return;
         }
 

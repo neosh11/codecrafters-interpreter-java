@@ -47,6 +47,10 @@ public class Main {
     } else {
       System.out.println("EOF  null"); // Placeholder, remove this line when implementing the scanner
     }
+    
+    if (hadError) {
+      System.exit(errorCode);
+    }
   }
 
   private static void runPrompt() throws IOException {
@@ -77,8 +81,10 @@ public class Main {
   }
 
   static boolean hadError = false;
+  static int errorCode = 0;
 
-  static void error(int line, String message) {
+  static void error(int line, String message, int code) {
+    errorCode = code;
     report(line, "", message);
   }
   private static void report(int line, String where,
