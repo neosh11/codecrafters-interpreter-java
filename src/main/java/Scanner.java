@@ -84,6 +84,22 @@ class Scanner {
                 addToken(TokenType.RIGHT_BRACE);
                 break;
 
+            case ',':
+                addToken(TokenType.COMMA);
+                break;
+            case '-':
+                addToken(TokenType.MINUS);
+                break;
+            case '+':
+                addToken(TokenType.PLUS);
+                break;
+            case '*':
+                addToken(TokenType.STAR);
+                break;
+            case '.':
+                addToken(TokenType.DOT);
+                break;
+
             case '"':
                 string();
                 break;
