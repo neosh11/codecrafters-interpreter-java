@@ -71,6 +71,18 @@ class Scanner {
                     // A comment goes until the end of the line.
                     while (peek() != '\n' && !isAtEnd())
                         advance();
+                } else if (match('*')) {
+                    while (peek() != '*' && peekNext() != '/' && !isAtEnd()) {
+                        if (peek() == '\n')
+                            line++;
+                        advance();
+                    }
+                    if (isAtEnd()) {
+                        Main.error(line, "Unterminated comment.", 65);
+                    } else {
+                        advance();
+                        advance();
+                    }
                 } else {
                     addToken(TokenType.SLASH);
                 }

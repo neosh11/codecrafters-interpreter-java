@@ -1,1 +1,5 @@
-,.$(#
+// Hello, world!
+var x = "123";
+
+/* Hello, world! */
+print x;
