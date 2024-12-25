@@ -71,6 +71,13 @@ class Scanner {
                 line++;
                 break;
 
+            case '(':
+                addToken(TokenType.LEFT_PAREN);
+                break;
+            case ')':
+                addToken(TokenType.RIGHT_PAREN);
+                break;
+
             case '"':
                 string();
                 break;

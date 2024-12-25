@@ -1,6 +1,6 @@
 enum TokenType {
     // Single-character tokens.
-    SEMICOLON, SLASH,
+    SEMICOLON, SLASH, LEFT_PAREN, RIGHT_PAREN,
     // One or two character tokens.
     EQUAL, EQUAL_EQUAL,
     // Literals.
