@@ -107,6 +107,9 @@ class Scanner {
             case '=':
                 addToken(match('=') ? TokenType.EQUAL_EQUAL : TokenType.EQUAL);
                 break;
+            case '!':
+                addToken(match('=') ? TokenType.BANG_EQUAL : TokenType.BANG);
+                break;
 
             case ';':
                 addToken(TokenType.SEMICOLON);

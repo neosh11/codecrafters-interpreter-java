@@ -5,6 +5,7 @@ enum TokenType {
     COMMA, MINUS, PLUS, STAR, DOT,
     // One or two character tokens.
     EQUAL, EQUAL_EQUAL,
+    BANG, BANG_EQUAL,
     // Literals.
     IDENTIFIER, STRING, NUMBER,
     // Keywords.
